@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="ResearchDefinition">
+    <Id>
+      <TypeId>ResearchDefinition</TypeId>
+      <SubtypeId>Minting</SubtypeId>
+    </Id>
+    <DisplayName>Minting</DisplayName>
+    <Entry>
+      <TypeId>BlueprintDefinition</TypeId>
+      <SubtypeId>GoldCoin</SubtypeId>
+    </Entry>
+    <Entry>
+      <TypeId>BlueprintDefinition</TypeId>
+      <SubtypeId>SilverCoin</SubtypeId>
+    </Entry>
+    <Entry>
+      <TypeId>BlueprintDefinition</TypeId>
+      <SubtypeId>IronCoin</SubtypeId>
+    </Entry>
+  </Definition>
+  <BlueprintClassEntries>
+    <Entry Class="Schematics" BlueprintSubtypeId="Schematic_Minting" />
+  </BlueprintClassEntries>
+  <Blueprints>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Schematic_Minting</SubtypeId>
+      </Id>
+      <DisplayName>Minting</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\Masonry.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Component" SubtypeId="IronIngot" />
+        <Item Amount="1" TypeId="Component" SubtypeId="GoldIngot" />
+        <Item Amount="5" TypeId="Component" SubtypeId="SilverIngot" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="SchematicItem" SubtypeId="Minting" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+  </Blueprints>
+  <PhysicalItems>
+    <PhysicalItem xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Minting</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Minting</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\Masonry.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.3</X>
+        <Y>0.1</Y>
+        <Z>0.3</Z>
+      </Size>
+      <Mass>0.018</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>Minting</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </PhysicalItem>
+  </PhysicalItems>
+</Definitions>

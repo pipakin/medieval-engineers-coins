@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BlueprintClassEntries>
+    <Entry Class="MetalMelting" BlueprintSubtypeId="GoldCoin" />
+    <Entry Class="MetalMelting" BlueprintSubtypeId="SilverCoin" />
+    <Entry Class="MetalMelting" BlueprintSubtypeId="IronCoin" />
+  </BlueprintClassEntries>
+
+  <Blueprints>
+    <Blueprint xsi:type="MyObjectBuilder_ComponentBlueprintDefinition">
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GoldCoin</SubtypeId>
+      </Id>
+      <DisplayName>Gold Coin</DisplayName>
+      <Icon>Textures\GUI\Icons\Coins\coin_ui.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="GoldIngot" />
+      </Prerequisites>
+      <Result Amount="10" TypeId="Component" SubtypeId="GoldCoin" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint xsi:type="MyObjectBuilder_ComponentBlueprintDefinition">
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SilverCoin</SubtypeId>
+      </Id>
+      <DisplayName>Silver Coin</DisplayName>
+      <Icon>Textures\GUI\Icons\Coins\coin_s_ui.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="SilverIngot" />
+      </Prerequisites>
+      <Result Amount="10" TypeId="Component" SubtypeId="SilverCoin" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint xsi:type="MyObjectBuilder_ComponentBlueprintDefinition">
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>IronCoin</SubtypeId>
+      </Id>
+      <DisplayName>Iron Coin</DisplayName>
+      <Icon>Textures\GUI\Icons\Coins\coin_i_ui.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="IronIngot" />
+      </Prerequisites>
+      <Result Amount="10" TypeId="Component" SubtypeId="IronCoin" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+    </Blueprint>
+  </Blueprints>
+</Definitions>

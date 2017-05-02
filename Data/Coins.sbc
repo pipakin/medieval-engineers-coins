@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Components>    
+    <Component>
+      <Id>
+        <TypeId>Component</TypeId>
+        <SubtypeId>GoldCoin</SubtypeId>
+      </Id>
+      <DisplayName>Gold Coin</DisplayName>
+      <Icon>Textures\GUI\Icons\Coins\coin_ui.dds</Icon>
+      <Size>
+        <X>0.2</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Model>Models\Coins\coin.mwm</Model>
+      <Mass>0.01</Mass>
+      <Volume>0.01</Volume>
+      <DropProbability>0.9</DropProbability>
+	  <CanSpawnFromScreen>true</CanSpawnFromScreen>
+      <MaxStackAmount>1000</MaxStackAmount>
+      <Health>20</Health>
+    </Component>
+    <Component>
+      <Id>
+        <TypeId>Component</TypeId>
+        <SubtypeId>SilverCoin</SubtypeId>
+      </Id>
+      <DisplayName>Silver Coin</DisplayName>
+      <Icon>Textures\GUI\Icons\Coins\coin_s_ui.dds</Icon>
+      <Size>
+        <X>0.2</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Model>Models\Coins\coin_s.mwm</Model>
+      <Mass>0.01</Mass>
+      <Volume>0.01</Volume>
+      <DropProbability>0.9</DropProbability>
+	  <CanSpawnFromScreen>true</CanSpawnFromScreen>
+      <MaxStackAmount>1000</MaxStackAmount>
+      <Health>20</Health>
+    </Component>
+    <Component>
+      <Id>
+        <TypeId>Component</TypeId>
+        <SubtypeId>IronCoin</SubtypeId>
+      </Id>
+      <DisplayName>Iron Coin</DisplayName>
+      <Icon>Textures\GUI\Icons\Coins\coin_i_ui.dds</Icon>
+      <Size>
+        <X>0.2</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Model>Models\Coins\coin_i.mwm</Model>
+      <Mass>0.01</Mass>
+      <Volume>0.01</Volume>
+      <DropProbability>0.9</DropProbability>
+	  <CanSpawnFromScreen>true</CanSpawnFromScreen>
+      <MaxStackAmount>1000</MaxStackAmount>
+      <Health>20</Health>
+    </Component>
+  </Components>
+</Definitions>
