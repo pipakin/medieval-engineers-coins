@@ -1,50 +1,45 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <BlueprintClassEntries>
-    <Entry Class="MetalMelting" BlueprintSubtypeId="GoldCoin" />
-    <Entry Class="MetalMelting" BlueprintSubtypeId="SilverCoin" />
-    <Entry Class="MetalMelting" BlueprintSubtypeId="IronCoin" />
-  </BlueprintClassEntries>
-
-  <Blueprints>
-    <Blueprint xsi:type="MyObjectBuilder_ComponentBlueprintDefinition">
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>GoldCoin</SubtypeId>
-      </Id>
-      <DisplayName>Gold Coin</DisplayName>
-      <Icon>Textures\GUI\Icons\Coins\coin_ui.dds</Icon>
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="GoldIngotToCoins"/>
+    <Icon>Textures\GUI\Icons\Ingots\gold_ingot_improved.dds</Icon>
+    <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
+    <DisplayName>Mint Gold Ingot into Gold Coins</DisplayName>
+    <Category>Smelting</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Component" Subtype="GoldIngot" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="10" Type="Component" Subtype="GoldCoin" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SilverIngotToCoins"/>
+      <Icon>Textures\GUI\Icons\Ingots\silver_ingot_improved.dds</Icon>
+      <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
+      <DisplayName>Mint Silver Ingot into Silver Coins</DisplayName>
+      <Category>Smelting</Category>
       <Prerequisites>
-        <Item Amount="1" TypeId="Component" SubtypeId="GoldIngot" />
+        <Item Amount="1" Type="Component" Subtype="SilverIngot" />
       </Prerequisites>
-      <Result Amount="10" TypeId="Component" SubtypeId="GoldCoin" />
-      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint xsi:type="MyObjectBuilder_ComponentBlueprintDefinition">
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>SilverCoin</SubtypeId>
-      </Id>
-      <DisplayName>Silver Coin</DisplayName>
-      <Icon>Textures\GUI\Icons\Coins\coin_s_ui.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Component" SubtypeId="SilverIngot" />
-      </Prerequisites>
-      <Result Amount="10" TypeId="Component" SubtypeId="SilverCoin" />
-      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint xsi:type="MyObjectBuilder_ComponentBlueprintDefinition">
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>IronCoin</SubtypeId>
-      </Id>
-      <DisplayName>Iron Coin</DisplayName>
-      <Icon>Textures\GUI\Icons\Coins\coin_i_ui.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Component" SubtypeId="IronIngot" />
-      </Prerequisites>
-      <Result Amount="10" TypeId="Component" SubtypeId="IronCoin" />
-      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-    </Blueprint>
-  </Blueprints>
+      <Results>
+        <Item Amount="10" Type="Component" Subtype="SilverCoin" />
+      </Results>
+      <CraftingTime Seconds="5"/>
+    </Definition>
+      <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+        <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="IronIngotToCoins"/>
+        <Icon>Textures\GUI\Icons\Materials\IronIngot.dds</Icon>
+        <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
+        <DisplayName>Mint Iron Ingot into Iron Coins</DisplayName>
+        <Category>Smelting</Category>
+        <Prerequisites>
+          <Item Amount="1" Type="Component" Subtype="IronIngot" />
+        </Prerequisites>
+        <Results>
+          <Item Amount="10" Type="Component" Subtype="IronCoin" />
+        </Results>
+        <CraftingTime Seconds="5"/>
+      </Definition>
 </Definitions>

@@ -6,41 +6,32 @@
       <SubtypeId>Minting</SubtypeId>
     </Id>
     <DisplayName>Minting</DisplayName>
-    <Entry>
-      <TypeId>BlueprintDefinition</TypeId>
-      <SubtypeId>GoldCoin</SubtypeId>
-    </Entry>
-    <Entry>
-      <TypeId>BlueprintDefinition</TypeId>
-      <SubtypeId>SilverCoin</SubtypeId>
-    </Entry>
-    <Entry>
-      <TypeId>BlueprintDefinition</TypeId>
-      <SubtypeId>IronCoin</SubtypeId>
-    </Entry>
+    <Entry Type="CraftingRecipeDefinition" Subtype="GoldIngotToCoins" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SilverIngotToCoins" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronIngotToCoins" />
   </Definition>
-  <BlueprintClassEntries>
-    <Entry Class="Schematics" BlueprintSubtypeId="Schematic_Minting" />
-  </BlueprintClassEntries>
-  <Blueprints>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>Schematic_Minting</SubtypeId>
-      </Id>
+  <Definition xsi:type="MyObjectBuilder_SessionComponentResearchDefinition">
+    <Id Type="MyObjectBuilder_SessionComponentResearchDefinition" Subtype="Minting" />
+    <Research Type="ResearchDefinition" Subtype="Minting"/>
+  </Definition>
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicMinting"/>
       <DisplayName>Minting</DisplayName>
-      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Description>Minting</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\Masonry.dds</Icon>
-      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Schematics</Category>
       <Prerequisites>
         <Item Amount="10" TypeId="Component" SubtypeId="IronIngot" />
         <Item Amount="1" TypeId="Component" SubtypeId="GoldIngot" />
         <Item Amount="5" TypeId="Component" SubtypeId="SilverIngot" />
       </Prerequisites>
-      <Result Amount="1" TypeId="SchematicItem" SubtypeId="Minting" />
-      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
-    </Blueprint>
-  </Blueprints>
+      <Results>
+        <Item Amount="1" Type="SchematicItem" Subtype="Minting" />
+      </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
   <PhysicalItems>
     <PhysicalItem xsi:type="MyObjectBuilder_SchematicItemDefinition">
       <Id>
